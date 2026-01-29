@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Dharani 💖</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(180deg, #ffe4ec, #fff0f6);
+        overflow: hidden;
+    }
+
+    /* Floating balloons */
+    .balloon {
+        position: absolute;
+        bottom: -100px;
+        font-size: 3rem;
+        animation: floatUp 10s linear infinite;
+        opacity: 0.9;
+    }
+
+    .balloon:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .balloon:nth-child(2) { left: 30%; animation-delay: 2s; }
+    .balloon:nth-child(3) { left: 60%; animation-delay: 4s; }
+    .balloon:nth-child(4) { left: 80%; animation-delay: 6s; }
+
+    @keyframes floatUp {
+        from { transform: translateY(0); }
+        to { transform: translateY(-120vh); }
+    }
+
+    /* Candle glow */
+    .candles {
+        position: absolute;
+        bottom: 10px;
+        font-size: 2rem;
+        animation: flicker 1.5s infinite alternate;
+    }
+
+    @keyframes flicker {
+        from { opacity: 0.7; }
+        to { opacity: 1; }
+    }
+
+    /* Sparkles */
+    .sparkle {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background: #ff8fab;
+        border-radius: 50%;
+        animation: sparkle 3s infinite;
+    }
+
+    @keyframes sparkle {
+        0% { opacity: 0; transform: scale(0); }
+        50% { opacity: 1; transform: scale(1); }
+        100% { opacity: 0; transform: scale(0); }
+    }
+
+    .screen {
+        width: 100vw;
+        height: 100vh;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+        animation: fade 0.8s ease forwards;
+        position: relative;
+        z-index: 2;
+    }
+
+    @keyframes fade {
+        from { opacity: 0; transform: translateY(20px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+        font-size: 2rem;
+        color: #c4004b;
+    }
+
+    p {
+        font-size: 1.2rem;
+        color: #5a0034;
+        margin-top: 10px;
+        line-height: 1.6;
+    }
+
+    button {
+        margin-top: 25px;
+        padding: 12px 25px;
+        border: none;
+        background: #ff4d88;
+        color: white;
+        font-size: 1.1rem;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #c4004b;
+        transform: scale(1.07);
+    }
+
+    .heart {
+        font-size: 3rem;
+        animation: beat 1.2s infinite;
+        margin-bottom: 10px;
+    }
+
+    @keyframes beat {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+    }
+</style>
+</head>
+
+<body>
+
+<!-- Decorations -->
+<div class="balloon">🎈</div>
+<div class="balloon">🎈</div>
+<div class="balloon">🎈</div>
+<div class="balloon">🎈</div>
+
+<div class="candles">🕯️ 🕯️ 🕯️ 🕯️ 🕯️</div>
+
+<!-- Sparkles -->
+<div class="sparkle" style="top:20%; left:15%"></div>
+<div class="sparkle" style="top:40%; left:70%"></div>
+<div class="sparkle" style="top:65%; left:30%"></div>
+<div class="sparkle" style="top:80%; left:60%"></div>
+
+<!-- PAGE 1 -->
+<div id="page1" class="screen" style="display:flex;">
+    <div class="heart">🎂💖</div>
+    <h1>Happy Birthday Dharani 💕</h1>
+    <p>This is a small surprise made just for you —  
+       filled with love, gratitude, and heartfelt wishes ✨</p>
+    <button onclick="next(2)">Next ➜</button>
+</div>
+
+<!-- PAGE 2 -->
+<div id="page2" class="screen">
+    <div class="heart">💞</div>
+    <h1>My Sister By Heart 💗</h1>
+    <p>You may not be my sister by blood,  
+       but you were the first person who treated me like a real brother.  
+       That bond means everything to me 🌸</p>
+    <button onclick="next(3)">Next ➜</button>
+</div>
+
+<!-- PAGE 3 -->
+<div id="page3" class="screen">
+    <div class="heart">💖</div>
+    <h1>Always By My Side ✨</h1>
+    <p>No matter the situation,  
+       you have always stood by me and supported me. 💕</p>
+    <button onclick="next(4)">Next ➜</button>
+</div>
+
+<!-- PAGE 4 -->
+<div id="page4" class="screen">
+    <div class="heart">🌷💗</div>
+    <h1>Grateful For You 😌</h1>
+    <p>Your care, understanding, and love  
+       are things I will always be thankful for.  
+       I’m lucky to have a sister like u in my life 💞</p>
+    <button onclick="next(5)">Next ➜</button>
+</div>
+
+<!-- PAGE 5 -->
+<div id="page5" class="screen">
+    <div class="heart">🌟💝</div>
+    <h1>Birthday Wishes 💕</h1>
+    <p>On your special day,  
+       I wish you happiness, good health, and  
+       May life always be kind to you ✨</p>
+    <button onclick="next(6)">Next ➜</button>
+</div>
+
+<!-- PAGE 6 -->
+<div id="page6" class="screen">
+    <div class="heart">🌈💖</div>
+    <h1>Dream Big ✨</h1>
+    <p>May you achieve all your dreams  
+       and reach every goal you work hard for.  
+       You deserve the best 💗</p>
+    <button onclick="next(7)">Next ➜</button>
+</div>
+
+<!-- PAGE 7 -->
+<div id="page7" class="screen">
+    <div class="heart">🎉💞</div>
+    <h1>Always Here 💕</h1>
+    <p>No matter what happens,  
+       remember you’ll always have me as your brother —  
+       supporting you always 🌷</p>
+    <button onclick="next(8)">Next ➜</button>
+</div>
+
+<!-- PAGE 8 -->
+<div id="page8" class="screen">
+    <div class="heart">💖🎂</div>
+    <h1>Once Again… Happy Birthday 💗</h1>
+    <p>Stay happy, stay strong, and keep smiling always 💕<br><br>
+       With lots of love,<br>
+       <strong>Your Annaya ❤️</strong></p>
+    <button onclick="restart()">Start Again 🔁</button>
+</div>
+
+<script>
+function next(n) {
+    document.querySelectorAll(".screen").forEach(s => s.style.display = "none");
+    document.getElementById("page" + n).style.display = "flex";
+}
+
+function restart() {
+    next(1);
+}
+</script>
+
+</body>
+</html>
